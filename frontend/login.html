@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Consult AI</title>
+
+        <link rel="stylesheet" href="./style.css">
 
     </head>
     <body>
             
          <div class="card">
-            <img class="icon" src="consult-ai-login-assets/consult-ai-login-assets/logo-icon.png">
-            <h1 class="title">Consult AI</h1>
-            <h3 class="subtitle">AIと一緒に、もっと前へ</h3>
-            <input type="email" placeholder="メールアドレス">
-            <input type="password" placeholder="パスワード">
+            <header>
+                <img class="icon" src="consult-ai-login-assets/logo-icon.png">
+                <h1 class="title">Consult AI</h1>
+                <h3 class="subtitle">AIと一緒に、もっと前へ</h3>
+            </header>
+            <form class="lbtn">
+                <div class="email-wrapper">
+                    <input type="email" id="email" placeholder="email">
+                </div>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="パスワード">
+                    <button type="button" id="toggle-password">
+                        <img src="consult-ai-login-assets/icon-eye-off.png">
+                    </button>
+                </div>
+            </form>
+            
             <div class="checkbox">
-                <input type="checkbox" id="remember" name="remember" checked>
-                <label for =remember>ログイン状態を保持する</label>
+                <label for =remember><input type="checkbox" id="remember" name="remember" checked>ログイン状態を保持する</label>
+                <p><a href="">パスワードを忘れた方</a></p>
             </div>
             <p><a href="settings.html">パスワードを忘れた方</a></p>
-            <button>ログイン -></button>
+            <button id="login-btn">ログイン -></button>
             <div class="divider">または</div>
-            <div class="Google">
-                <button>Googleで続ける</button>
-                <button>Githubで続ける</button>
+            <div class="button">
+                <button id="googlebtn"><img src="consult-ai-login-assets/icon-google.png">Googleで続ける</button>
+                <button id="githubbtn"><img src="consult-ai-login-assets/icon-github.png">Githubで続ける</button>
             </div>
             <p>アカウントはお持ちではないですか? <a href="new-setting.html">新規登録</a></p>
         </div>
+        <scripts src="scripts.js"></scripts>
     </body>
 </html>
